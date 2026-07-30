@@ -108,8 +108,17 @@ npm install
 
 npm start
 ```
-
 ---
+
+## 🚀 Quick Start (Windows)
+
+For Windows users, a `start.bat` script is included to automatically launch both the Django backend and React frontend.
+
+```bash
+start.bat
+```
+
+This script starts both servers in a single step, eliminating the need to launch them manually in separate terminals.
 
 ## 🔐 Environment Variables
 
