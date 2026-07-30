@@ -75,7 +75,7 @@ Smart-Traffic-Monitoring-System/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/Smart-Traffic-Monitoring-System.git
+https://github.com/KashmalaShafique/Smart-Traffic-Monitoring-System.git
 cd Smart-Traffic-Monitoring-System
 ```
 
