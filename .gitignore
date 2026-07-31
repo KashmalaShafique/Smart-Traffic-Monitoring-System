@@ -24,3 +24,4 @@ Thumbs.db
 
 # YOLO model weights
 *.pt
+*.mp4
