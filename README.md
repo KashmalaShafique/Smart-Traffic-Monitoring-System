@@ -120,19 +120,34 @@ start.bat
 
 This script starts both servers in a single step, eliminating the need to launch them manually in separate terminals.
 
-## 🔐 Environment Variables
+## 🔑 Gemini API Configuration
 
-Create a `.env` file inside the backend directory and add:
+This project requires a **Google Gemini API Key** for the Video Q&A feature.
 
-```env
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-SECRET_KEY=YOUR_DJANGO_SECRET_KEY
-DEBUG=True
+Before running the project:
+
+1. Obtain your own Gemini API key from Google AI Studio.
+2. Open the following file:
+
+```text
+videoQA/views.py
 ```
 
-> **Note:** Never upload your `.env` file or API keys to GitHub.
+3. Replace:
 
----
+```python
+GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE"
+```
+
+with your own Gemini API key:
+
+```python
+GEMINI_API_KEY = "YOUR_ACTUAL_GEMINI_API_KEY"
+```
+
+4. Save the file and run the project normally.
+
+> **Note:** For security reasons, the original API key has been removed from this repository.
 
 ## 📸 Screenshots
 
