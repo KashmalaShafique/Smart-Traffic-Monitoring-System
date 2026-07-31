@@ -56,18 +56,29 @@ This project is designed to improve traffic monitoring and management by automat
 ## 📂 Project Structure
 
 ```text
-Smart-Traffic-Monitoring-System/
+SmartTrafficSystem/
 │
-├── backend/                # Django backend & REST APIs
-├── frontend/               # React frontend
-├── models/                 # YOLO11 and ML models
-├── screenshots/            # Project screenshots
-├── requirements.txt
 ├── .gitignore
 ├── README.md
-└── LICENSE
+├── start.bat
+├── data/
+├── frontend/
+├── models/
+├── screenshots/
+├── src/
+├── traffic_backend/
+│   ├── authentication/
+│   ├── nlp/
+│   ├── prediction/
+│   ├── traffic/
+│   ├── videoqa/
+│   ├── templates/
+│   ├── traffic_backend/
+│   ├── manage.py
+│   └── requirements.txt
+│
+└── package-lock.json
 ```
-
 ---
 
 ## 🚀 Installation
