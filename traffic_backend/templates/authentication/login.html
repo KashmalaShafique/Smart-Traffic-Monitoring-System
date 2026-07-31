@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Traffic System - Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: linear-gradient(135deg, #0a0f1e 0%, #1a2540 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+.navbar {
+    background: rgba(17, 24, 39, 0.95) !important;
+    border-bottom: 1px solid #1e2d4a;
+    padding: 15px 30px;
+}
+.navbar-brand {
+    color: #38bdf8 !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+.nav-link {
+    color: #e2e8f0 !important;
+    font-size: 15px;
+}
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88vh;
+    padding: 20px;
+}
+.login-card {
+    background: #111827;
+    border: 1px solid #38bdf8;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+.login-card h3 {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.login-card .subtitle {
+    color: #64748b;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+.form-label {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.form-control {
+    background: #0a0f1e !important;
+    border: 1px solid #1e2d4a !important;
+    color: #e2e8f0 !important;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+.form-control:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 3px rgba(56,189,248,0.15) !important;
+}
+.form-control::placeholder { color: #475569 !important; }
+.btn-login {
+    background: #38bdf8;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 15px;
+    transition: all 0.2s;
+    margin-top: 8px;
+}
+.btn-login:hover {
+    background: #0ea5e9;
+    transform: translateY(-1px);
+}
+.forgot-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 13px;
+}
+.forgot-link:hover { color: #0ea5e9; }
+.register-link {
+    color: #64748b;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+.register-link a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+.remember-text { color: #94a3b8; font-size: 13px; }
+.divider {
+    border-color: #1e2d4a;
+    margin: 20px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand" href="#">🚦 Smart Traffic System</a>
+        <div class="ms-auto">
+            <a class="nav-link d-inline" href="{% url 'register' %}">Register</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Login Form -->
+<div class="login-wrapper">
+    <div class="login-card">
+        <h3>Welcome Back</h3>
+        <p class="subtitle">Login to access the traffic monitoring system</p>
+
+        <!-- Messages -->
+        {% if messages %}
+    {% for message in messages %}
+        {% if message.tags == 'error' %}
+            <div class="alert alert-danger alert-dismissible fade show py-2 mb-3"
+                style="font-size: 13px; border-radius: 8px;">
+                ❌ {{ message }}
+                <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert"></button>
+            </div>
+        {% else %}
+            <div class="alert alert-success alert-dismissible fade show py-2 mb-3"
+                style="font-size: 13px; border-radius: 8px;">
+                ✅ {{ message }}
+                <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert"></button>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" name="username"
+                      placeholder="Enter your username" required
+                      autocomplete="off">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" name="password"
+                      placeholder="Enter your password" required
+                      autocomplete="new-password">
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="remember-text">
+                    <input type="checkbox" name="remember" class="me-1"> Remember me
+                </div>
+                <a href="{% url 'forgot_password' %}" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Login →</button>
+
+            <div class="register-link">
+               Contact administrator to create an account.
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

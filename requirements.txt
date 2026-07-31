@@ -1,0 +1,15 @@
+ultralytics
+opencv-python
+fastapi
+uvicorn
+websockets
+python-multipart
+pandas
+numpy
+scikit-learn
+xgboost
+spacy
+transformers
+torch
+torchvision
+python-dotenv

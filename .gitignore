@@ -1,0 +1,26 @@
+# Environment variables
+.env
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django database
+db.sqlite3
+
+# React
+node_modules/
+build/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# YOLO model weights
+*.pt
