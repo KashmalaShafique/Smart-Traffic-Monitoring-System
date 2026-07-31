@@ -52,33 +52,6 @@ This project is designed to improve traffic monitoring and management by automat
 5. Users can interact with traffic footage using natural language through the **Gemini-powered Video Q&A** feature.
 
 ---
-
-## 📂 Project Structure
-
-```text
-SmartTrafficSystem/
-│
-├── .gitignore
-├── README.md
-├── start.bat
-├── data/
-├── frontend/
-├── models/
-├── screenshots/
-├── src/
-├── traffic_backend/
-│   ├── authentication/
-│   ├── nlp/
-│   ├── prediction/
-│   ├── traffic/
-│   ├── videoqa/
-│   ├── templates/
-│   ├── traffic_backend/
-│   ├── manage.py
-│   └── requirements.txt
-│
-└── package-lock.json
-```
 ---
 
 ## 🚀 Installation
@@ -164,21 +137,62 @@ GEMINI_API_KEY = "YOUR_ACTUAL_GEMINI_API_KEY"
 
 ### Dashboard
 
-*Add dashboard screenshot here.*
-
-### Vehicle Detection
-
-*Add vehicle detection screenshot here.*
+![Traffic Dashboard](screenshots/Traffic_Dashboard.png)
 
 ### Congestion Prediction
 
-*Add congestion prediction screenshot here.*
+![Congestion Prediction](screenshots/Congestion_prediction.png)
 
 ### Video Q&A
 
-*Add Video Q&A screenshot here.*
+![Video Q&A](screenshots/VideoQA.png)
+
+### Analytics
+
+![Analytics](screenshots/Analytics.png)
+
+### Incidents
+
+![Incidents](screenshots/Incidents.png)
 
 ---
+
+## 📹 Demo Video
+
+The original traffic video used for testing is **not included** in this repository because of its large size.
+
+You can use any traffic surveillance video in MP4 format and place it in the appropriate location before running the project.
+where to add this in readme
+
+---
+---
+
+## 📂 Project Structure
+
+```text
+SmartTrafficSystem/
+│
+├── .gitignore
+├── README.md
+├── start.bat
+├── data/
+├── frontend/
+├── models/
+├── screenshots/
+├── src/
+├── traffic_backend/
+│   ├── authentication/
+│   ├── nlp/
+│   ├── prediction/
+│   ├── traffic/
+│   ├── videoqa/
+│   ├── templates/
+│   ├── traffic_backend/
+│   ├── manage.py
+│   └── requirements.txt
+│
+└── package-lock.json
+```
 
 ## 📈 Future Improvements
 
