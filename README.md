@@ -135,27 +135,34 @@ GEMINI_API_KEY = "YOUR_ACTUAL_GEMINI_API_KEY"
 
 ## 📸 Screenshots
 
-### Dashboard
+### 🏠 Home Page
+
+![Home Page](screenshots/Home_page.png)
+
+### 📊 Traffic Dashboard
 
 ![Traffic Dashboard](screenshots/Traffic_Dashboard.png)
 
-### Congestion Prediction
+### 🚗 Vehicle Detection
+
+![Vehicle Detection](screenshots/VideoQA2.png)
+
+### 🚦 Congestion Prediction
 
 ![Congestion Prediction](screenshots/Congestion_prediction.png)
 
-### Video Q&A
-
-![Video Q&A](screenshots/VideoQA.png)
-
-### Analytics
-
-![Analytics](screenshots/Analytics.png)
-
-### Incidents
+### 📝 Incident Analysis
 
 ![Incidents](screenshots/Incidents.png)
 
----
+### 📈 Analytics Dashboard
+
+![Analytics](screenshots/Analytics.png)
+
+### 🎥 Video Q&A
+
+![Video Q&A](screenshots/VideoQA.png)
+
 
 ## 📹 Demo Video
 
